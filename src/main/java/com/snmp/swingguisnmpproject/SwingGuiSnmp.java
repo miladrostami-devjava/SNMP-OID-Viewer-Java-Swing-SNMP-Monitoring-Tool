@@ -24,6 +24,17 @@ public class SwingGuiSnmp {
     private SwingGuiSnmpProject snmpMainApp;
 
     public SwingGuiSnmp() {
+        
+        
+        try{
+        updateOidViewer();    
+        }catch(IOException e){
+            
+         e.printStackTrace();
+        }
+             
+        
+        
         snmpMainApp = new SwingGuiSnmpProject();
         jFrame = new JFrame("SNMP OID Viewer");
         jFrame.setSize(400, 600);
